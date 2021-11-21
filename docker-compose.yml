@@ -1,0 +1,12 @@
+version: "3.4"
+
+services:
+     
+    angular:
+        build:
+          context: "angular-nginx/"
+        image: angular-app
+        env_file:
+          - "./angular-nginx/.env"
+        ports:
+          - 5000:3000
